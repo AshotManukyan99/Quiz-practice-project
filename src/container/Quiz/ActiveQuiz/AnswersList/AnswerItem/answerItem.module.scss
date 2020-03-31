@@ -1,0 +1,27 @@
+.AnswerItem {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  &:hover {
+    background: rgba(255, 255, 255, .2);
+    transition: background .3s ease-in-out;
+
+  }
+}
+.AnswerItem.succes {
+  background-color: rgba( 161,240, 69, .7);
+}
+.AnswerItem.error {
+  background-color: rgba( 240,87, 108, .8);
+}
+.AnswerItemQuestion {
+  background-color: red;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
