@@ -9,49 +9,50 @@ class Drawer extends Component {
     state = {
         link: [
             {
-                id:1,
-                nameTo:"/quiz"
+                id: 1,
+                name: 'Quiz',
+                nameTo: "/quiz"
             },
             {
-                id:2,
-                nameTo:"/auth"
+                id: 2,
+                name: 'Auth',
+                nameTo: "/auth"
             },
             {
-                id:3,
-                nameTo:"/quiz-creator"
+                id: 3,
+                name: 'Quiz-Creator',
+                nameTo: "/quiz-creator"
             },
             {
-                id:4,
-                nameTo:"/quizList"
+                id: 4,
+                name: 'QuizList',
+                nameTo: "/quiz-list"
             },
         ]
     }
 
 
-
-renderLi = () => {
-    return this.state.link.map((item, index) => {
-        return <NavLink to={item.nameTo} key={index}> {item.id} Link </NavLink>
-    })
-}
-
-
-render()
-{
-    return (
-        <>
-            <nav className={this.props.isOpen ? style.Drawer : style.DrawerClose}>
-                <ul style={{display: "flex", flexDirection: 'column'}}>
-
-                    {
-                        this.renderLi()
-                    }
-                </ul>
-            </nav>
-            {this.props.isOpen ? <BackDrop onclick={this.props.onClose}/> : null}
-        </>
-    );
-}
+    render() {
+        return (
+            <>
+                <nav className={this.props.isOpen ? style.Drawer : style.DrawerClose}>
+                    <ul style={{display: "flex", flexDirection: 'column'}}>
+                        {
+                            this.state.link.map((li, index) => {
+                                return <NavLink
+                                            key={index}
+                                            to={li.nameTo}
+                                            onClick={this.props.onClose}>
+                                            {li.name}
+                                         </NavLink>
+                            })
+                        }
+                    </ul>
+                </nav>
+                {this.props.isOpen ? <BackDrop onclick={this.props.onClose}/> : null}
+            </>
+        );
+    }
 
 }
 

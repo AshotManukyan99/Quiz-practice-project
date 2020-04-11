@@ -4,6 +4,7 @@ import AnswersList from "./AnswersList/AnswersList";
 import style from '../ActiveQuiz/activeQuiz.module.scss'
 
 const ActiveQuiz = props => {
+
     return (
         <div className={style.ActiveQuiz}>
             <p className={style.Question}>

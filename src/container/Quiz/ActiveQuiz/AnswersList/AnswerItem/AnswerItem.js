@@ -8,13 +8,10 @@ export default props =>
         if( props.answerState ) {
             cls.push(style[props.answerState])
         }
-
-
     return  (
     <li
         className={cls.join(' ')}
         onClick={() => props.clickNameUser(props.id, props.text)}  >
-        <img src={props.icon}  alt={props.text + `photo` }   className={style.icon} />
         &nbsp;
         {props.text}
     </li>

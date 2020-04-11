@@ -6,7 +6,10 @@ const Button = props => {
     let btnStyle ;
      switch (props.type) {
          case  "primary":
-             btnStyle = style.primary
+             btnStyle = style.primary;
+             if (props.disabled){
+                 btnStyle = style.primaryDisabled
+             }
              break;
          case "secondary":
              btnStyle = style.secondary
@@ -18,8 +21,7 @@ const Button = props => {
     return(
         <button  onClick={props.onclick}
                  className={btnStyle}
-                    disabled={props.disabled}
-        >
+                 disabled={props.disabled}>
             {props.children}
         </button>
     )

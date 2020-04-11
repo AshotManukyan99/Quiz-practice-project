@@ -15,6 +15,20 @@
   }
 }
 
+.primaryDisabled {
+  margin-top:20px;
+  border-radius: 10px;
+  border: none;
+  padding:  5px  10px;
+  color: white;
+  background-color: #2ecc71;
+  &:hover {
+    cursor: not-allowed;
+    font-weight: bold;
+  }
+}
+
+
 .secondary {
   padding: 5px 10px;
   border: none;
