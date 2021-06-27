@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import BackDrop from "../../UI/BackDrop/BackDrop";
-import {NavLink} from "react-router-dom";
+import React, {Component} from "react"
+import BackDrop from "../../UI/BackDrop/BackDrop"
+import {NavLink} from "react-router-dom"
 
 import style from './drawer.module.scss'
 
@@ -27,36 +27,37 @@ class Drawer extends Component {
                 id: 4,
                 name: 'QuizList',
                 nameTo: "/quiz-list"
-            },
+            }
         ]
     }
 
 
     render() {
         return (
-            <>
+            <div>
                 <nav className={this.props.isOpen ? style.Drawer : style.DrawerClose}>
                     <ul style={{display: "flex", flexDirection: 'column'}}>
                         {
                             this.state.link.map((li, index) => {
                                 return <NavLink
-                                            key={index}
-                                            to={li.nameTo}
-                                            onClick={this.props.onClose}>
-                                            {li.name}
-                                         </NavLink>
+                                    key={index}
+                                    to={li.nameTo}
+                                    onClick={this.props.onClose}>
+                                    {li.name}
+                                </NavLink>
                             })
                         }
                     </ul>
                 </nav>
+
                 {this.props.isOpen ? <BackDrop onclick={this.props.onClose}/> : null}
-            </>
-        );
+            </div>
+        )
     }
 
 }
 
 
-export default Drawer;
+export default Drawer
 
 

@@ -1,13 +1,14 @@
-import React, {Component} from "react";
-import MenuToggle from "../../components/Navigation/MenuToggle/MenuToggle";
-import Drawer from "../../components/Navigation/Drawer/Drawer";
+import React, {Component} from "react"
+import MenuToggle from "../../components/Navigation/MenuToggle/MenuToggle"
+import Drawer from "../../components/Navigation/Drawer/Drawer"
 
 import style from './layout.module.scss'
 
 
 class Layout extends Component {
+
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             isOpen: false
         }
@@ -30,4 +31,4 @@ class Layout extends Component {
     }
 }
 
-export default Layout;
+export default Layout

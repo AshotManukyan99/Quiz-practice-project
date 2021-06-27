@@ -1,10 +1,10 @@
-import React from 'react';
-import Layout from "./hoc/Layout/Layout";
-import Quiz from "./container/Quiz/Quiz";
-import Auth from "./container/Auth/Auth";
-import QuizCreator from "./container/QuizCreator/QuizCreator";
-import QuizList from "./container/QuizList/Quizlist";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import React from 'react'
+import Quiz from "./container/Quiz/Quiz"
+import Auth from "./container/Auth/Auth"
+import QuizCreator from "./container/QuizCreator/QuizCreator"
+import QuizList from "./container/QuizList/Quizlist"
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import Layout from "./hoc/Layout/Layout"
 
 
 export default function App() {
@@ -20,6 +20,6 @@ export default function App() {
                 </Switch>
             </Layout>
         </Router>
-    );
+    )
 }
 
